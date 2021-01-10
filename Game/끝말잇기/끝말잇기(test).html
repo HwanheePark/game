@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끝말잇기</title>
+</head>
+<body>
+    <script>
+        alert('끝말잇기를 시작하겠네.')
+        var word = '기러기'
+        while(true){
+            var answer = prompt(word);
+            if(word[word.length - 1] === answer[0]){
+                word = answer;
+            } else {
+                alert('틀렸소, 단어는 \''+word+'\'라네, 다시 입력하시오.')
+            }
+        };
+    </script>
+</body>
+</html>

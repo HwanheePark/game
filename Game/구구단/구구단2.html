@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+<body>
+    <script>
+        function number1(){
+            value1 = Math.floor(Math.random()*10);
+            if(value1 === 0){
+                number1();
+            } else if(value1 === 1){
+                number1();
+            };
+        };
+        function number2(){
+            value2 = Math.floor(Math.random()*10);
+            if(value2 === 0){
+                number2();
+            } else if(value2 === 1){
+                number2();
+            };
+        };
+        alert('구구단을 외자~ 구구단을 외자~');
+        for(i = 0; i < 10; i++){
+            number1();
+            number2();
+            while(true){
+                var answer = Number(prompt('('+(10-i)+'번 남음)    '+value1+' x '+value2+' ?'));
+                if(answer === value1*value2){
+                    break;
+                } else {
+                    alert('땡!');
+                };
+            };
+        };
+        alert('굿!');
+    </script>
+    <img src = '따봉.jpg'>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끝말잇기</title>
+</head>
+<body>
+    <script>
+        var word = '기러기';
+        var overlap = ['기러기'];
+        function overlaping(){
+            for(var a = 0; a <= 100; a++){
+                if(answer === overlap[a]){
+                    return true;
+                    break;
+                }
+            }
+        };
+        alert('Mission : 끝말잇기를 10번 이어가라!');
+        alert('시작!');
+        for(var i = 1; i <= 10; i++){
+            var answer = prompt('('+i+'번째) '+word);
+            if(answer.length >= 2){
+                if(word[word.length - 1] === answer[0]){
+                    if(true === overlaping()){
+                        alert('쓰였던 단어는 입력 못한다네.');
+                        i -= 1;
+                    } else {
+                        overlap.push(answer);
+                        word = answer;
+                    };
+                } else {
+                    alert('틀렸소, 단어는 \''+word+'\'라네, 다시 입력하시오.');
+                    i -= 1;
+                };
+            } else {
+                    alert('2글자 이상으로 적으시오.');
+                    i -= 1;
+            };
+        };
+        alert('Mission Complete!');
+    </script>
+    <img src = '따봉.jpg'>
+</body>
+</html>
