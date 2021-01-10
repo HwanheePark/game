@@ -17,11 +17,11 @@
                 };
             };
         };
-        alert('Mission : 끝말잇기를 10번 이어가라!');
+        alert('Mission : 끝말잇기를 5번 이어가라!');
         alert('시작!');
         var i = 0;
         while(true){
-            var answer = prompt('('+(10-i)+'번 남음)    '+word);
+            var answer = prompt('('+(5-i)+'번 남음)    '+word);
             if(answer !== null){
                 if(answer.length >= 2){
                     if(word[word.length - 1] === answer[0]){
@@ -31,7 +31,7 @@
                             overlap.push(answer);
                             word = answer;
                             i += 1;
-                            if(i === 10){
+                            if(i === 5){
                                 break;
                             };
                         };
