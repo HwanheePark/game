@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+<body>
+    <script>
+        function question(){
+            value1 = Math.floor(10*Math.random());
+            if(value1 === 0){
+                question();
+            } else if(value1 === 1){
+                question();
+            };
+        };
+        function question2(){
+            value2 = Math.floor(10*Math.random());
+            if(value2 === 0){
+                question2();
+            } else if(value2 === 1){
+                question2();
+            };
+        };
+        var i = 0;
+        alert('구구단을 외자~ 구구단을 외자~');
+        while(true){
+            question();
+            question2();
+            while(true){
+                var answer = Number(prompt('('+(10-i)+'번 남음)    '+value1+' x '+value2+' ?'));
+                if(answer === value1*value2){
+                    i += 1;
+                    break;
+                } else {
+                    alert('땡!');
+                };
+            };
+            if(i === 10){
+                break;
+            };
+        };
+        alert('당신은 구구단 마스터.');
+    </script>
+    <img src = "따봉.jpg">
+</body>
+</html>
