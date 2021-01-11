@@ -12,24 +12,32 @@
         alert('베스킨롸빈\'s thㅓ릐 완~');
         var answer = Number(prompt('1, 2!! (1~3의 숫자입력. 아마 못이길걸???)'));
         while(true){
-            if(value >= 27){
-                alert('31!!    You lose~!!');
-                break;
-            };
             if(answer === 1){
                 value += 1;
+                if(value >= 31){
+                    alert('31!!    You lose~!!');
+                    break;
+                };
                 alert('(현재 : '+value+')  음............나는..!');
                 alert((value+1)+', '+(value+2)+', '+(value+3)+'!!');
                 value += 3;
                 answer = Number(prompt('(현재 : '+value+') 1~3의 숫자중 하나입력.'));
             } else if(answer === 2){
                 value += 2;
+                if(value >= 31){
+                    alert('31!!    You lose~!!');
+                    break;
+                };
                 alert('(현재 : '+value+')  음............나는..!');
                 alert((value+1)+', '+(value+2)+'!!');
                 value += 2;
                 answer = Number(prompt('(현재 : '+value+') 1~3의 숫자중 하나입력.'));
             } else if(answer === 3){
                 value += 3;
+                if(value >= 31){
+                    alert('31!!    You lose~!!');
+                    break;
+                };
                 alert('(현재 : '+value+')  음............나는..!');
                 alert((value+1)+'!!');
                 value += 1;
