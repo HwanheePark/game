@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베스킨롸빈's31</title>
+</head>
+<body>
+    <script>
+        var value = 2;
+        alert('신나고~ 재미나는~ 랜덤~ 게임!!');
+        alert('베스킨롸빈\'s thㅓ릐 완~');
+        var answer = Number(prompt('1, 2!! (1~3의 숫자입력. 아마 못이길걸???)'));
+        while(true){
+            if(value >= 27){
+                alert('31!!    You lose~!!');
+                break;
+            };
+            if(answer === 1){
+                value += 1;
+                alert('(현재 : '+value+')  음............나는..!');
+                alert((value+1)+', '+(value+2)+', '+(value+3)+'!!');
+                value += 3;
+                answer = Number(prompt('(현재 : '+value+') 1~3의 숫자중 하나입력.'));
+            } else if(answer === 2){
+                value += 2;
+                alert('(현재 : '+value+')  음............나는..!');
+                alert((value+1)+', '+(value+2)+'!!');
+                value += 2;
+                answer = Number(prompt('(현재 : '+value+') 1~3의 숫자중 하나입력.'));
+            } else if(answer === 3){
+                value += 3;
+                alert('(현재 : '+value+')  음............나는..!');
+                alert((value+1)+'!!');
+                value += 1;
+                answer = Number(prompt('(현재 : '+value+') 1~3의 숫자중 하나입력.'));
+            } else {
+                alert('1, 2, 3중에 하나!');
+                answer = Number(prompt('(현재 : '+value+') 1~3의 숫자중 하나입력.'));
+            };
+        };
+    </script>
+    <img src = '메롱.jpg'>
+</body>
+</html>
