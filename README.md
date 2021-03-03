@@ -1,2 +1,0 @@
-# game
-practice of javascript
