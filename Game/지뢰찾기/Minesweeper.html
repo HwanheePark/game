@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <style>
+        td {
+            border: 1px solid aquamarine;
+            border-radius: 10px;
+            font-weight: bold;
+            width: 25px;
+            height: 25px;
+            background: gray;
+            text-align: center;
+            user-select: none;
+        }
+        .setting {
+            width: 60px;
+            height: 30px;
+            border: white;
+            background: white;
+        }
+        .setting_title {
+            border: 1px solid orange;
+            border-radius: 10px;
+            background: pink;
+        }
+        #thead_td {
+            background: white;
+        }
+        td.opened {
+            background: white;
+        }
+        td.exclamation_mark {
+            background: rgb(59, 59, 248);
+            color: white;
+        }
+        td.question_mark {
+            background: gold;
+        }
+        td.mine {
+            background: tomato;
+        }
+        #result {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class='setting setting_title'>
+                Horizontal amount 
+            </td>
+            <td class='setting'>
+                <input type="number" id='hor' value="10">
+            </td>
+        </tr>
+        <tr>
+            <td class='setting setting_title'>
+                Vertical amount
+            </td>
+            <td class='setting'>
+                <input type="number" id='ver' value="10">
+            </td>
+        </tr>
+        <tr>
+            <td class='setting setting_title'>
+                Mine amount
+            </td>
+            <td class='setting'>
+                <input type="number" id='mine' value="10">
+            </td>
+            <td class='setting'>
+                <button id="execution">Execution</button>
+            </td>
+        </tr>
+    </table>
+    <table id='table'>
+        <thead>
+            <tr>
+                <td id='thead_td' colspan="3">
+                    <span id="timer">0</span>
+                    sec
+                </td>
+            </tr>
+        </thead>
+        <tbody id='tbody'></tbody>
+    </table>
+    <div id="result"></div>
+    <script src="Minesweeper.js"></script>
+</body>
+</html>
